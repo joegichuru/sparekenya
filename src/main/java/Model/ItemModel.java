@@ -6,24 +6,25 @@ package Model;
 
 import javax.ejb.Local;
 import javax.ejb.Singleton;
+import javax.ejb.Stateful;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * An item is a single object posted by user
  * **/
-@Singleton
+@Stateful
 @Local
 public class ItemModel {
     private int itemId;
     private String itemName;
     private String itemDescription;
-    private String itemCategory;
     private int numBedrooms;
     private int numBathrooms;
     private boolean availabilityStatus;
     private boolean isPackingAvailable;
     private List<String> descriptiveImages=new ArrayList<String>();
+    private Categories itemCategory;
 
     public int getItemId() {
         return itemId;
@@ -48,15 +49,6 @@ public class ItemModel {
     public void setItemDescription(String itemDescription) {
         this.itemDescription = itemDescription;
     }
-
-    public String getItemCategory() {
-        return itemCategory;
-    }
-
-    public void setItemCategory(String itemCategory) {
-        this.itemCategory = itemCategory;
-    }
-
     public int getNumBedrooms() {
         return numBedrooms;
     }
@@ -95,5 +87,13 @@ public class ItemModel {
 
     public void setDescriptiveImages(List<String> descriptiveImages) {
         this.descriptiveImages = descriptiveImages;
+    }
+
+    public Categories getItemCategory() {
+        return itemCategory;
+    }
+
+    public void setItemCategory(Categories itemCategory) {
+        this.itemCategory = itemCategory;
     }
 }

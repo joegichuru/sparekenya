@@ -32,6 +32,40 @@
                         </p:inputText>
                         <p:message for="email" display="icon"/>
 
+                        <p:outputLabel for="phone" value="Phone Number:"/>
+                        <p:inputText id="phone" >
+
+                        </p:inputText>
+                        <p:message for="phone" display="icon"/>
+
+                        <p:outputLabel for="password" value="Password"/>
+                        <p:password id="password" required="true">
+
+                        </p:password>
+                        <p:message for="password" display="icon"/>
+
+                        <p:outputLabel for="password-repeat" value="Repeat Password"/>
+                        <p:password id="password-repeat" required="true">
+
+                        </p:password>
+                        <p:message for="password-repeat" display="icon"/>
+
+                        <p:outputLabel for="occupation" value="Occupation:"/>
+                        <p:inputText id="occupation" required="true" requiredMessage="Occupation required">
+
+                        </p:inputText>
+                        <p:message for="occupation" display="icon"/>
+
+                        <p:outputLabel for="profile-pic" value="Profile picture"/>
+                        <p:fileUpload id="profile-pic" cancelLabel="Cancel"
+                                      dragDropSupport="true" uploadLabel="Upload"
+                                      fileLimit="1" fileLimitMessage="Not more than one"
+                        >
+
+                        </p:fileUpload>
+
+
+
                     </p:panelGrid>
                 </h:form>
             </p:panel>
