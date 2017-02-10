@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" build-on-make="true" name="sparewebapp:ejb exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/sparewebapp_ejb_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="sparewebapp/ejb/EJB" />
+      <element id="javaee-facet-classes" facet="sparewebapp/ejb/EJB" />
+    </root>
+  </artifact>
+</component>

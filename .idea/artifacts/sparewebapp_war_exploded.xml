@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="sparewebapp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/sparewebapp_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="sparewebapp/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="sparewebapp" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.5.0" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: javax:javaee-api:7.0" />
+          <element id="library" level="project" name="Maven: org.primefaces.themes:all-themes:1.0.10" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:6.0" />
+          <element id="library" level="project" name="Maven: net.bootsfaces:bootsfaces:1.0.2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="sparewebapp/ejb/EJB" />
+    </root>
+  </artifact>
+</component>
