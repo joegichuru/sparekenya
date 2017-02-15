@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.adminfaces:admin-template:0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/adminfaces/admin-template/0.1-SNAPSHOT/admin-template-0.1-20170213.013955-28.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/adminfaces/admin-template/0.1-SNAPSHOT/admin-template-0.1-20170213.013955-28-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/adminfaces/admin-template/0.1-SNAPSHOT/admin-template-0.1-20170213.013955-28-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

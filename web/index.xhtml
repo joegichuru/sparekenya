@@ -15,7 +15,41 @@
       </ui:define>
        <ui:define name="page-content">
            <p:panel header="Dashboard" >
-               <p:button styleClass="btn-google" value="Button"/>
+               <p:dataScroller value="#{templateBean.natures}" var="lis" chunkSize="3">
+                   <f:facet name="header">Latest Posts</f:facet>
+                   <f:facet name="loader">
+                       <p:commandButton type="button" value="view more" icon="ui-icon-circle-triangle-s"
+                                        styleClass="btn-primary"/>
+                   </f:facet>
+                   <p:panelGrid columns="3" layout="grid" styleClass="info-box">
+                       <p:column id="img-column">
+                           <p:graphicImage name="img/nature/#{lis.img}.jpg" alt="Img" styleClass="img-thumbnail">
+
+                           </p:graphicImage>
+                           <p:button value="More Inf" styleClass="btn-success btn-sm" icon="fa fa-check"/>
+
+                       </p:column>
+                       <p:column id="desc-column">
+
+
+                           <div class="description">
+                               <div class="description-header"><h4>Features</h4></div>
+                               <div class="description-text pull-right">
+                                   <p>Name #{lis.name}</p>
+                                   <p>Description #{lis.desc}</p>
+                                   <p>Price per month #{lis.price}</p>
+                                   <p>No. Of Bedrooms :#{lis.bed}</p>
+                               </div>
+                           </div>
+                       </p:column>
+                       <p:column id="ratings-column">
+                           <p:rating value="5" styleClass="pull-right text-aqua"/>
+
+                       </p:column>
+                   </p:panelGrid>
+
+               </p:dataScroller>
+
            </p:panel>
 
        </ui:define>

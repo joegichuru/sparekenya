@@ -9,10 +9,9 @@ import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.sound.midi.SysexMessage;
 import java.io.Serializable;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by joseph on 2/5/17.
@@ -40,6 +39,8 @@ public class TemplateBean implements Serializable{
         userModel.setLname("Kabogo");
         userModel.setUserId(1119204);
         data=locations.getCities();
+
+
     }
     private int noOfMessages;
     private long timeSendOfLastMsg;
@@ -126,5 +127,38 @@ public class TemplateBean implements Serializable{
 
     public Map<String, String> getData() {
         return data;
+    }
+    private List<Nature> natures;
+
+    public List<Nature> getNatures() {
+        natures=new ArrayList<>();
+        for (int i=1;i<=12;i++){
+            Nature nature=new Nature();
+            nature.setImg("nature"+i);
+            nature.setName("nature"+i);
+            nature.setDesc("Description for nature"+i+" More Desc");
+            nature.setPrice(((i%2*i/2)+1)*1000);
+            nature.setBed(2);
+            natures.add(nature);
+        }
+        return natures;
+    }
+
+    public void setNatures(List<Nature> natures) {
+
+      this.natures = natures;
+    }
+    private List<String> list=new ArrayList<>();
+
+    public List<String> getList() {
+       for(int i=1;i<=12;i++){
+           list.add("nature"+i);
+       }
+        return list;
+    }
+
+    public void setList(List<String> list) {
+
+        this.list = list;
     }
 }

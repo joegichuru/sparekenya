@@ -49,6 +49,30 @@
 
                         </p:password>
                         <p:message for="password-repeat" display="icon"/>
+                        <p:outputLabel for="city" value="City"/>
+                        <p:selectOneMenu id="city" >
+                            <f:selectItem itemLabel="--Select city--"/>
+                            <f:selectItems value="#{templateBean.data}"/>
+                        </p:selectOneMenu>
+                        <p:message for="city" display="icon"/>
+                        <p:outputLabel for="street" value="Street"/>
+                        <p:selectOneMenu id="street">
+                            <f:selectItem itemLabel="--Select street--"/>
+                        </p:selectOneMenu>
+                        <p:message for="street" display="icon"/>
+
+                        <p:outputLabel for="profile-pic" value="Profile picture"/>
+                        <p:fileUpload id="profile-pic" cancelLabel="Cancel"
+                                      dragDropSupport="false" uploadLabel="Upload"
+                                      fileLimit="1" fileLimitMessage="Not more than one"
+                                      mode="advanced"
+                                      sizeLimit="5000000"
+                                      allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+                                      previewWidth="200"
+                        >
+
+                        </p:fileUpload>
+                        <p:message for="profile-pic" showDetail="true"/>
 
                         <p:outputLabel for="occupation" value="Occupation:"/>
                         <p:inputText id="occupation" required="true" requiredMessage="Occupation required">
@@ -56,13 +80,7 @@
                         </p:inputText>
                         <p:message for="occupation" display="icon"/>
 
-                        <p:outputLabel for="profile-pic" value="Profile picture"/>
-                        <p:fileUpload id="profile-pic" cancelLabel="Cancel"
-                                      dragDropSupport="true" uploadLabel="Upload"
-                                      fileLimit="1" fileLimitMessage="Not more than one"
-                        >
 
-                        </p:fileUpload>
 
 
 
