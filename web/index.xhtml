@@ -18,34 +18,36 @@
                <p:dataScroller value="#{templateBean.natures}" var="lis" chunkSize="3">
                    <f:facet name="header">Latest Posts</f:facet>
                    <f:facet name="loader">
-                       <p:commandButton type="button" value="view more" icon="ui-icon-circle-triangle-s"
+                       <p:commandButton type="button" value="more" icon="fa fa-chevron-circle-down"
                                         styleClass="btn-primary"/>
                    </f:facet>
-                   <p:panelGrid columns="3" layout="grid" styleClass="info-box">
+                   <p:panelGrid columns="2" layout="grid" styleClass="info-box">
                        <p:column id="img-column">
                            <p:graphicImage name="img/nature/#{lis.img}.jpg" alt="Img" styleClass="img-thumbnail">
 
                            </p:graphicImage>
-                           <p:button value="More Inf" styleClass="btn-success btn-sm" icon="fa fa-check"/>
+                           <p:button value="See more" styleClass="btn-primary btn-sm btn-flat" icon="fa fa-expand"/>
 
                        </p:column>
                        <p:column id="desc-column">
 
-
-                           <div class="description">
+                           <div class="box box-success">
                                <div class="description-header"><h4>Features</h4></div>
-                               <div class="description-text pull-right">
-                                   <p>Name #{lis.name}</p>
-                                   <p>Description #{lis.desc}</p>
-                                   <p>Price per month #{lis.price}</p>
-                                   <p>No. Of Bedrooms :#{lis.bed}</p>
+                               <div class="description-text">
+                                   <ul style="list-style-type: none">
+                                       <li><p><span class="text-bold text-navy">Name:</span>#{lis.name}</p></li>
+                                       <li><p><span class="text-bold text-navy">Desc:</span>#{lis.desc}</p></li>
+                                       <li><p><span class="text-bold text-navy">Price per Month(Ksh):</span>#{lis.price}</p></li>
+                                       <li><p><span class="text-bold text-navy">Bedrooms:</span>#{lis.bed}</p></li>
+                                   </ul>
                                </div>
                            </div>
+                           <div class="pull-right box-footer">
+                               <p:rating value="5" styleClass="pull-right text-aqua"/>
+                               <small>10 people rated</small>
+                           </div>
                        </p:column>
-                       <p:column id="ratings-column">
-                           <p:rating value="5" styleClass="pull-right text-aqua"/>
 
-                       </p:column>
                    </p:panelGrid>
 
                </p:dataScroller>
