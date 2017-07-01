@@ -1,1 +1,2 @@
 web/* linguist-vendored
+*.java linguist-language=Java
